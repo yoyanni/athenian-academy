@@ -2,7 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+#__next {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 :root {
+  /* Colors */
   --primary: #1b4965;
   --primaryOpacity: #1b496573;
   --primaryDark: #003049;
@@ -15,4 +22,10 @@
   --backgroundColor: #f9f9f980;
   --footerIconBackground: #f9f9f91a;
   --white: #fff;
+  /* Sizes */
+  --titleFontSize: 36px;
+  --primaryFontSize: 28px;
+  --secondaryFontSize: 22px;
+  --tertiaryFontSize: 16px;
+  --quaternaryFontSize: 14px;
 }

@@ -6,7 +6,32 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: {},
+  theme: {
+    extend: {
+      colors: {
+        primary: "var(--primary)",
+        primaryOpacity: "var(--primaryOpacity)",
+        primaryDark: "var(--primaryDark)",
+        bodyTextColor: "var(--bodyTextColor)",
+        bodyTextOpacityColor: "var(--bodyTextOpacityColor)",
+        navTextColor: "var(--navTextColor)",
+        accentColor: "var(--accentColor)",
+        accentLightColor: "var(--accentLightColor)",
+        borderColor: "var(--borderColor)",
+        backgroundColor: "var(--backgroundColor)",
+        footerIconBackground: "var(--footerIconBackground)",
+        white: "var(--white)",
+      },
+      fontSize: {
+        titleFontSize: "var(--titleFontSize)",
+        primaryFontSize: "var(--primaryFontSize)",
+        secondaryFontSize: "var(--secondaryFontSize)",
+        tertiaryFontSize: "var(--tertiaryFontSize)",
+        quaternaryFontSize: "var(--quaternaryFontSize)",
+        quinaryFontSize: "var(--quinaryFontSize)",
+      },
+    },
+  },
   plugins: [],
 };
 export default config;

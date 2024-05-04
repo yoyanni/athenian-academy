@@ -1,3 +1,3 @@
 export default function Home() {
-  return <h1>Athenian Academy</h1>;
+  return <div className="grow flex justify-center items-center">Homepage</div>;
 }
