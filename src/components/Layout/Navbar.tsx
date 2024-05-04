@@ -28,7 +28,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div>
+    <header>
       <div className="h-[100px] flex justify-center items-center bg-primaryDark">
         <Image src={logo} alt="search" width={264} />
       </div>
@@ -68,7 +68,7 @@ const Navbar = () => {
           </>
         )}
       </nav>
-    </div>
+    </header>
   );
 };
 

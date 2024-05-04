@@ -1,3 +1,5 @@
 export default function Home() {
-  return <div className="grow flex justify-center items-center">Homepage</div>;
+  return (
+    <main className="grow flex justify-center items-center">Homepage</main>
+  );
 }
