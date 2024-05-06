@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import Article from "@/components/Generic/Article";
 import Carousel from "./Carousel";
+import News from "./News";
 
 import bannerOne from "../../../public/Homepage/banner-one.jpeg";
 import hero from "../../../public/Homepage/hero-image.jpeg";
@@ -17,8 +18,13 @@ const articles = [
     title: "Ερευνητικά Κέντρα",
     body: "Είναι πλέον κοινά παραδεκτό ότι ένας αναγνώστης αποσπάται από το περιεχόμενο που διαβάζει, όταν εξετάζει τη διαμόρφωση μίας σελίδας. Η ουσία της χρήσης του Lorem Ipsum είναι ότι έχει λίγο-πολύ μία ομαλή κατανομή γραμμάτων.",
   },
+
   {
     id: 2,
+    title: "Τα Νέα μας",
+  },
+  {
+    id: 3,
     title: "Εκδόσεις",
     body: "Είναι πλέον κοινά παραδεκτό ότι ένας αναγνώστης αποσπάται από το περιεχόμενο που διαβάζει, όταν εξετάζει τη διαμόρφωση μίας σελίδας. Η ουσία της χρήσης του Lorem Ipsum είναι ότι έχει λίγο-πολύ μία ομαλή κατανομή γραμμάτων.",
   },
@@ -43,9 +49,12 @@ const HomePage = () => {
       >
         <Carousel type="research" />
       </Article>
+      <Article title={articles[2].title} hasAccent>
+        <News />
+      </Article>
       <Article
-        title={articles[2].title}
-        body={articles[2].body}
+        title={articles[3].title}
+        body={articles[3].body}
         hasAccent
         isElevated
       >
