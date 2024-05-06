@@ -30,6 +30,9 @@ const config: Config = {
         quaternaryFontSize: "var(--quaternaryFontSize)",
         quinaryFontSize: "var(--quinaryFontSize)",
       },
+      boxShadow: {
+        card: "0px 4px 5px 0px #F0F0F3",
+      },
     },
   },
   plugins: [],

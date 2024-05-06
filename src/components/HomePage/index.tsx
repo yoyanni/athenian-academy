@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import Article from "@/components/Generic/Article";
+import Carousel from "./Carousel";
 
 import bannerOne from "../../../public/Homepage/banner-one.jpeg";
 import hero from "../../../public/Homepage/hero-image.jpeg";
@@ -9,6 +10,16 @@ const articles = [
   {
     id: 0,
     title: "Καλώς ήρθατε στη δικτυακή πύλη της Ακαδημίας Αθηνών",
+    body: "Είναι πλέον κοινά παραδεκτό ότι ένας αναγνώστης αποσπάται από το περιεχόμενο που διαβάζει, όταν εξετάζει τη διαμόρφωση μίας σελίδας. Η ουσία της χρήσης του Lorem Ipsum είναι ότι έχει λίγο-πολύ μία ομαλή κατανομή γραμμάτων.",
+  },
+  {
+    id: 1,
+    title: "Ερευνητικά Κέντρα",
+    body: "Είναι πλέον κοινά παραδεκτό ότι ένας αναγνώστης αποσπάται από το περιεχόμενο που διαβάζει, όταν εξετάζει τη διαμόρφωση μίας σελίδας. Η ουσία της χρήσης του Lorem Ipsum είναι ότι έχει λίγο-πολύ μία ομαλή κατανομή γραμμάτων.",
+  },
+  {
+    id: 2,
+    title: "Εκδόσεις",
     body: "Είναι πλέον κοινά παραδεκτό ότι ένας αναγνώστης αποσπάται από το περιεχόμενο που διαβάζει, όταν εξετάζει τη διαμόρφωση μίας σελίδας. Η ουσία της χρήσης του Lorem Ipsum είναι ότι έχει λίγο-πολύ μία ομαλή κατανομή γραμμάτων.",
   },
 ];
@@ -23,6 +34,22 @@ const HomePage = () => {
           src={bannerOne}
           alt="Banner one"
         />
+      </Article>
+      <Article
+        title={articles[1].title}
+        body={articles[1].body}
+        isElevated
+        hasAccent
+      >
+        <Carousel type="research" />
+      </Article>
+      <Article
+        title={articles[2].title}
+        body={articles[2].body}
+        hasAccent
+        isElevated
+      >
+        <Carousel type="edition" />
       </Article>
     </main>
   );
