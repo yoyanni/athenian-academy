@@ -12,6 +12,7 @@ import logo from "../../../public/Layout/logo.png";
 
 const Navbar = () => {
   const [data, setData] = useState<mainMenuResponse>();
+  const [isMenuActive, setisMenuActive] = useState(false);
   const [activeItem, setActiveItem] = useState(0);
 
   useEffect(() => {
@@ -32,10 +33,25 @@ const Navbar = () => {
   return (
     <header>
       <div className="h-[100px] flex justify-center items-center bg-primaryDark">
-        <Image className="ms-auto translate-x-[20px]" src={logo} alt="search" width={264} />
-        <Image className="ms-auto me-4" src={burger} alt="search" width={40} />
+        <Image
+          className="ms-auto translate-x-[20px]"
+          src={logo}
+          alt="search"
+          width={264}
+        />
+        <Image
+          className="ms-auto me-4 sm:hidden"
+          src={burger}
+          alt="search"
+          width={40}
+          onClick={() => setisMenuActive(!isMenuActive)}
+        />
       </div>
-      <nav className="flex flex-col justify-center items-center sm:gap-4 bg-primary text-navTextColor sm:h-[80px] sm:flex-row">
+      <nav
+        className={`${
+          isMenuActive ? "hidden " : ""
+        }flex flex-col justify-center items-center sm:gap-4 bg-primary text-navTextColor sm:h-[80px] sm:flex-row`}
+      >
         {data && (
           <>
             <ul className="w-full flex flex-col justify-center sm:flex-row sm:gap-8">
