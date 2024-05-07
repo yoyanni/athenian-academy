@@ -1,10 +1,10 @@
 import Image from "next/image";
 
-import logo from "../../../public/logo.png";
-import espa from "../../../public/espa.png";
-import fb from "../../../public/fb-social.svg";
-import ig from "../../../public/ig-social.svg";
-import yt from "../../../public/yt-social.svg";
+import fb from "../../../public/Layout/Footer/fb-social.svg";
+import ig from "../../../public/Layout/Footer/ig-social.svg";
+import yt from "../../../public/Layout/Footer/yt-social.svg";
+import espa from "../../../public/Layout/Footer/espa.png";
+import logo from "../../../public/Layout/logo.png";
 
 const Footer = () => {
   return (

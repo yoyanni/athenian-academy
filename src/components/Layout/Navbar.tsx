@@ -4,10 +4,10 @@ import Link from "next/link";
 
 import { mainMenuResponse } from "../types";
 
-import greekFlag from "../../../public/greek-flag.png";
-import downArrow from "../../../public/down-arrow.svg";
-import search from "../../../public/search-icon.svg";
-import logo from "../../../public/logo.png";
+import greekFlag from "../../../public/Layout/Navbar/greek-flag.png";
+import downArrow from "../../../public/Layout/Navbar/down-arrow.svg";
+import search from "../../../public/Layout/Navbar/search-icon.svg";
+import logo from "../../../public/Layout/logo.png";
 
 const Navbar = () => {
   const [data, setData] = useState<mainMenuResponse>();

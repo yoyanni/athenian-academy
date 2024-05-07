@@ -21,7 +21,11 @@ const Content = ({ pubDetailsList, activePub, setActivePub }: ContentProps) => {
       >
         <div className="flex justify-between mt-4 py-4 border-b border-primaryBorderColor ">
           <h4 className="basis-2/3">{pb.title}</h4>
-          <Image className={imgClasses} src={arrow} alt="alt" />
+          <Image
+            className={imgClasses}
+            src={arrow}
+            alt="Accordion arrow icon"
+          />
         </div>
         {/* Depending on data source, pb.body would have to be sanitised to make sure to avoid potential XSS attacks */}
         {/* Since data source is owned by us then sanitisation is not necessary for now */}
