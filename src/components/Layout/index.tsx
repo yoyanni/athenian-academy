@@ -1,8 +1,8 @@
-import { LayoutType } from "./types";
+import { LayoutProps } from "./types";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
-const Layout = ({ children }: LayoutType) => {
+const Layout = ({ children }: LayoutProps) => {
   return (
     <>
       <Navbar />

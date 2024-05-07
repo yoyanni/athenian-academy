@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { mainMenuResponse } from "./types";
 import Image from "next/image";
 import Link from "next/link";
+
+import { mainMenuResponse } from "../types";
 
 import greekFlag from "../../../public/greek-flag.png";
 import downArrow from "../../../public/down-arrow.svg";

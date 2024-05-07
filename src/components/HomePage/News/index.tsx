@@ -59,7 +59,9 @@ const News = () => {
             key={nc}
             onClick={() => setActiveItem(nc)}
             className={`px-8 py-2 rounded-full${
-              activeItem === nc ? " bg-accentColor text-white" : ""
+              activeItem === nc
+                ? " bg-accentColor text-white"
+                : " hover:text-accentColor"
             } cursor-pointer`}
           >
             <h3>{nc}</h3>
