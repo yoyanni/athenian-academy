@@ -18,6 +18,7 @@ const config: Config = {
         accentColor: "var(--accentColor)",
         accentLightColor: "var(--accentLightColor)",
         borderColor: "var(--borderColor)",
+        primaryBorderColor: "var(--primaryBorderColor)",
         backgroundColor: "var(--backgroundColor)",
         footerIconBackground: "var(--footerIconBackground)",
         white: "var(--white)",
