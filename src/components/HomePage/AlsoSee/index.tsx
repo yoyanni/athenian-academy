@@ -30,8 +30,8 @@ const places = [
 
 const AlsoSee = () => {
   return (
-    <div className="w-[60%] mx-auto mt-12">
-      <div className="flex justify-center gap-8">
+    <div className="mx-auto mt-12 sm:w-[60%]">
+      <div className="flex flex-col gap-8 px-4 sm:flex-row sm:justify-center">
         {places.map((p) => (
           <div
             key={p.id}
@@ -51,7 +51,7 @@ const AlsoSee = () => {
           </div>
         ))}
       </div>
-      <Image className="mt-20" src={banner} alt="Also see banner" />
+      <Image className="px-4 mt-20" src={banner} alt="Also see banner" />
     </div>
   );
 };

@@ -40,7 +40,7 @@ const HomePage = () => {
       <Image className="h-[300px] object-cover" src={hero} alt="Hero image" />
       <Article title={articles[0].title} body={articles[0].body}>
         <Image
-          className="mt-20 sm:w-[60%] sm:mx-auto"
+          className="px-4 mt-20 sm:w-[60%] sm:mx-auto"
           src={bannerOne}
           alt="Banner one"
         />
