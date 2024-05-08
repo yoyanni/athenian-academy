@@ -9,26 +9,9 @@ import logo from "../../../public/Layout/logo.png";
 const Footer = () => {
   return (
     <footer>
-      <div className="flex justify-center gap-40 p-8 bg-primary text-white">
-        <div>
-          <Image className="" src={logo} alt="footer logo" width={276} />
-          <div className="flex justify-center gap-4 mt-4">
-            <Image src={fb} alt="fb social icons" />
-            <Image src={ig} alt="ig social icons" />
-            <Image src={yt} alt="yt social icons" />
-          </div>
-        </div>
-        <div>
-          <h3 className="font-bold">ΕΠΙΚΟΙΝΩΝΙΑ</h3>{" "}
-          <address className="not-italic text-quaternaryFontSize">
-            Πανεπιστημίου 28, 106 79 Αθήνα <br /> Τ: 210 3634700
-            <br /> F: 210 3634806
-            <br />
-            E-mail: info@academyofathens.gr
-          </address>
-        </div>
-        <div>
-          <h3>ΧΡΗΣΙΜΕΣ ΠΛΗΡΟΦΟΡΙΕΣ</h3>{" "}
+      <div className="flex flex-wrap justify-center gap-y-8 p-8 bg-primary text-white sm:flex-row-reverse sm:flex-nowrap sm:gap-40">
+        <div className="basis-1/2 sm:basis-auto">
+          <h3 className="font-bold">ΧΡΗΣΙΜΕΣ ΠΛΗΡΟΦΟΡΙΕΣ</h3>
           <ul className="text-quaternaryFontSize">
             <li className="text-accentColor">Ευρετήριο Προσώπων</li>
             <li>Πρόσβαση</li>
@@ -36,6 +19,23 @@ const Footer = () => {
             <li>Δελτία Τύπου</li>
             <li>Προκηρύξεις</li>
           </ul>
+        </div>
+        <div className="basis-1/2 sm:basis-auto">
+          <h3 className="font-bold">ΕΠΙΚΟΙΝΩΝΙΑ</h3>
+          <address className="not-italic text-quaternaryFontSize">
+            Πανεπιστημίου 28, 106 79 Αθήνα <br /> Τ: 210 3634700
+            <br /> F: 210 3634806
+            <br />
+            E-mail: info@academyofathens.gr
+          </address>
+        </div>
+        <div className=" flex flex-col items-center">
+          <Image className="" src={logo} alt="footer logo" width={276} />
+          <div className="flex justify-center gap-4 mt-4">
+            <Image src={fb} alt="fb social icons" />
+            <Image src={ig} alt="ig social icons" />
+            <Image src={yt} alt="yt social icons" />
+          </div>
         </div>
       </div>
       <div className="py-3">
