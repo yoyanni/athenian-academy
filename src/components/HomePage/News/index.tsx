@@ -68,7 +68,7 @@ const News = () => {
           </li>
         ))}
       </ul>
-      <div className="w-[60%] mx-auto mt-10 flex justify-center gap-12">
+      <div className="mx-auto mt-10 px-4 flex flex-col gap-8 sm:w-[60%] sm:flex-row sm:justify-center sm:gap-12 sm:px-0">
         <Section
           img={primarySection.img}
           about={primarySection.about}
@@ -77,7 +77,7 @@ const News = () => {
           body={primarySection.body}
           isPrimary
         />
-        <div className="flex flex-col justify-between">
+        <div className="flex flex-col gap-8 sm:justify-between sm:gap-0">
           {secondarySections.map((s) => (
             <Section
               key={s.id}

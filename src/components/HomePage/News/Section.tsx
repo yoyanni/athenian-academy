@@ -22,8 +22,8 @@ const Section = ({
 }: SectionType) => {
   if (isPrimary) {
     return (
-      <section className={`w-[400px] flex flex-col ${classes.section}`}>
-        <Image className="w-[400px]" src={img.src} alt={img.alt} />
+      <section className={`sm:w-[400px] flex flex-col ${classes.section}`}>
+        <Image className="w-full sm:w-[400px]" src={img.src} alt={img.alt} />
         <span className={classes.span}>{about}</span>
         <h2 className={classes.h2}>{title}</h2>
         <time className={classes.time}>{date}</time>
@@ -35,8 +35,14 @@ const Section = ({
     );
   } else {
     return (
-      <section className={`w-[600px] h-[180px] flex gap-4 ${classes.section}`}>
-        <Image className="w-[250px] object-cover" src={img.src} alt={img.alt} />
+      <section
+        className={`gap-4 flex flex-col sm:flex-row sm:w-[600px] sm:h-[180px] ${classes.section}`}
+      >
+        <Image
+          className="w-full h-[300px] sm:w-[225px] sm:h-auto object-cover"
+          src={img.src}
+          alt={img.alt}
+        />
         <div>
           <span className={classes.span}>{about}</span>
           <h2 className={classes.h2}>{title}</h2>
