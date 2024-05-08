@@ -58,7 +58,7 @@ const News = () => {
           <li
             key={nc}
             onClick={() => setActiveItem(nc)}
-            className={`px-8 py-2 rounded-full${
+            className={`px-4 py-2 rounded-full sm:px-8${
               activeItem === nc
                 ? " bg-accentColor text-white"
                 : " hover:text-accentColor"
