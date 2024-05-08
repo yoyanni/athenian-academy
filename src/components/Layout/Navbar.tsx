@@ -49,7 +49,7 @@ const Navbar = () => {
       </div>
       <nav
         className={`${
-          isMenuActive ? "hidden " : ""
+          isMenuActive ? "" : "hidden "
         }flex flex-col justify-center items-center sm:gap-4 bg-primary text-navTextColor sm:h-[80px] sm:flex-row`}
       >
         {data && (
@@ -68,6 +68,7 @@ const Navbar = () => {
                   >
                     <Link
                       href={i.url}
+                      onClick={() => setisMenuActive(false)}
                       className={`block py-4 border-b sm:border-0 sm:p-2 sm:rounded-full  ${linkClasses}`}
                     >
                       {i.name}
