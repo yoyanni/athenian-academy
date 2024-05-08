@@ -6,14 +6,15 @@ import { mainMenuResponse } from "../types";
 
 import greekFlag from "../../../public/Layout/Navbar/greek-flag.png";
 import burger from "../../../public/Layout/Navbar/burger.svg";
+import cross from "../../../public/Layout/Navbar/cross.svg";
 import downArrow from "../../../public/Layout/Navbar/down-arrow.svg";
 import search from "../../../public/Layout/Navbar/search-icon.svg";
 import logo from "../../../public/Layout/logo.png";
 
 const Navbar = () => {
   const [data, setData] = useState<mainMenuResponse>();
-  const [isMenuActive, setisMenuActive] = useState(false);
   const [activeItem, setActiveItem] = useState(0);
+  const [isMenuActive, setisMenuActive] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,26 +28,29 @@ const Navbar = () => {
         console.error("Error fetching: ", e);
       }
     };
+
     fetchData();
+    setisMenuActive(window.innerWidth > 640 ? true : false);
   }, []);
 
   return (
     <header>
       <div className="h-[100px] flex justify-center items-center bg-primaryDark">
         <Image
-          className="ms-auto translate-x-[20px]"
+          className="ms-auto translate-x-[20px] sm:ms-0 sm:translate-x-0 "
           src={logo}
           alt="search"
           width={264}
         />
         <Image
           className="ms-auto me-4 sm:hidden"
-          src={burger}
+          src={isMenuActive ? cross : burger}
           alt="search"
           width={40}
           onClick={() => setisMenuActive(!isMenuActive)}
         />
       </div>
+
       <nav
         className={`${
           isMenuActive ? "" : "hidden "
@@ -54,7 +58,7 @@ const Navbar = () => {
       >
         {data && (
           <>
-            <ul className="w-full flex flex-col justify-center sm:flex-row sm:gap-8">
+            <ul className="w-full sm:w-auto flex flex-col justify-center sm:flex-row sm:gap-8">
               {data.items.map((i) => {
                 const linkClasses =
                   activeItem === i.id
@@ -77,7 +81,7 @@ const Navbar = () => {
                 );
               })}
             </ul>
-            <div className="w-full flex flex-row justify-center items-center gap-4 py-4">
+            <div className="w-full sm:w-auto flex flex-row justify-center items-center gap-4 py-4">
               <button>
                 <Image src={search} alt="search-bar icon" />
               </button>
