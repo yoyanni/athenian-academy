@@ -37,10 +37,10 @@ const articles = [
 const HomePage = () => {
   return (
     <main className="grow flex flex-col justify-center items-center">
-      <Image src={hero} alt="Hero image" />
+      <Image className="h-[300px] object-cover" src={hero} alt="Hero image" />
       <Article title={articles[0].title} body={articles[0].body}>
         <Image
-          className="w-[60%] mt-20 mx-auto"
+          className="mt-20 sm:w-[60%] sm:mx-auto"
           src={bannerOne}
           alt="Banner one"
         />
