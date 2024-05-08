@@ -51,7 +51,7 @@ const Carousel = ({ type }: CarouselType) => {
 
   return (
     <>
-      <div className="w-[60%] relative mt-20 mx-auto flex justify-center gap-4">
+      <div className="sm:w-[60%] relative mt-20 mx-auto flex flex-col items-center sm:items-stretch sm:flex-row sm:justify-center gap-4">
         <Image
           className="absolute left-[2%] top-[50%] -translate-y-4"
           src={leftArrow}

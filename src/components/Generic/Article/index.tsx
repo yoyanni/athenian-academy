@@ -17,7 +17,7 @@ const Article = ({
         {title}
         {hasAccent && <div className="w-[100px] h-[2px] bg-accentColor"></div>}
       </h1>
-      {body && <p className="w-[60%] mt-8 mx-auto">{body}</p>}
+      {body && <p className="mx-4 mt-8 sm:w-[60%] sm:mx-auto">{body}</p>}
       {children}
     </article>
   );
