@@ -50,7 +50,7 @@ const PublicationPage = () => {
 
   return (
     <main className="grow my-12">
-      <h1 className="w-fit mx-auto text-titleFontSize text-primary font-bold">
+      <h1 className="w-fit mx-auto text-titleFontSize text-primary font-bold text-center">
         {activeNav === 676
           ? "Το Βιβλιοπωλείο "
           : activeNav === 674
@@ -58,7 +58,7 @@ const PublicationPage = () => {
           : "Ηλεκτρονικά Δημοσιεύματα "}
         της Ακαδημίας Αθηνών
       </h1>
-      <div className="w-[60%] mx-auto mt-4 flex gap-8">
+      <div className="flex gap-2 mt-4 sm:w-[60%] sm:mx-auto sm:gap-8">
         {navList && (
           <Submenu
             navList={navList}

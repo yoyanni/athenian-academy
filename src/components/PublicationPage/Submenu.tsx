@@ -2,7 +2,7 @@ import { SubmenuProps } from "./types";
 
 const Submenu = ({ navList, activeNav, setActiveNav }: SubmenuProps) => {
   return (
-    <div className="shrink-0 basis-[160px] h-min flex flex-col gap-2 py-4 bg-backgroundColor">
+    <div className="shrink-0 basis-[160px] sticky top-[5%] h-min flex flex-col gap-2 py-4 bg-backgroundColor">
       {navList.map((navItem) => {
         const isActiveClass =
           navItem.id === activeNav
