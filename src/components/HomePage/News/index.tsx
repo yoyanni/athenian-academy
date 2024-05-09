@@ -77,7 +77,7 @@ const News = () => {
           body={primarySection.body}
           isPrimary
         />
-        <div className="flex flex-col gap-8 sm:justify-between sm:gap-0">
+        <div className="basis-2/3 flex flex-col gap-8 sm:justify-between sm:gap-0">
           {secondarySections.map((s) => (
             <Section
               key={s.id}
